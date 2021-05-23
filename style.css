@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* Navigation Bar*/
+.mainNav{
+    background-color: rgb(14%, 16%, 18%);
+    width: 100%;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.bar a{
+    color: azure;
+    font-weight: 500;
+}
+
+.navRight{
+    display: inherit;
+    position: absolute;
+    right: 0;
+    margin-right: 3rem;
+}
+
+.bell, .plus{
+    padding-right: 2rem;
+}
+
+.mainNav svg{
+    fill: azure;
+}
+
+#search{
+    background-color: rgb(14%, 16%, 18%);
+    color: azure;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    min-width: 25rem;
+    transition: 0.25s;
+}
+
+#search::-webkit-input-placeholder{
+    color: rgb(184, 187, 187);
+}
+
+#search:focus{
+    min-width: 50rem;
+    transition: 0.25s;
+    background-color: azure;
+    border-radius: 0.5rem;
+    color: rgb(14%, 16%, 18%);
+    outline: none;
+}
+
+.search{
+    margin-left: 1.5rem;
+    border: 1px solid rgb(71, 86, 102);
+    border-radius: 0.5rem;
+}
+
+.plus, .profileRight{
+    display: flex;
+    align-items: center;
+}
+
+.dp{
+    height: 2rem;
+    width: 2rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* Globally setting width of all image tag */
+img{
+    width: 100%;
+}
+
+/* Content div */
+.out{
+    display: flex;
+    justify-content: center;
+    padding: 0 5rem;
+}
+
+/* Container inside content div */
+.main{
+    padding: 0 2rem;
+    margin: 0 0;
+}
+
+/* Top container inside main container */
+.top{
+    margin-top: 4rem;
+}
+
+/* Navigation bar inside top container */
+.nav2 a{
+    color: rgb(14%, 16%, 18%);
+    font-size: 1.4rem;
+    padding-right: 2rem;
+}
+
+.nav2 svg{
+    filter: invert(0.6);
+}
+
+.nav2 svg:hover{
+    filter: invert(0);
+}
+
+.nav2 a:focus{
+    font-weight: 500;
+}
+
+.profile{
+    height: 30rem;
+    width: 30rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/* For responsive navigation bar inside top container as none and contents inside each repository as none until selected */
+.mid, .contents{
+    display: none;
+}
+
+/* Globally setting font-size of all paragraph tag */
+p{
+    font-size: 1.5rem;
+}
+
+/* bottom container inside main container */
+.bottom{
+    display: flex;
+}
+
+
+/* Setting the first div and also the profile picture, location and followers div inside it */
+.login{
+    font-weight: lighter;
+    color: rgb(136, 138, 138);
+}
+
+.loc{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.loc p{
+    display: inline-block;
+    padding-left: 0.5rem;
+    margin-bottom: 0;
+}
+
+.follows{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.follows p{
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.dot{
+    padding: 0 0.5rem;
+}
+
+
+/* Setting Repo counts */
+.repoCount{
+    background-color: rgb(221, 220, 220);
+    border-radius: 1.5rem;
+    padding: 0 0.7rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+#searchRepo{
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+}
+
+/* Setting the second div inside the bottom container */
+.reps{
+    margin: 3rem;
+    width: 100%;
+}
+
+.reps .repo{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.contents{
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.contents a{
+    font-size: 1.5rem;
+    color: rgb(121, 119, 119);
+}
+
+.contents a:hover{
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: 0.25s;
+    color: brown;
+}
+
+/* Reponsive hamburger button for mobile screen */
+.ham{
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+    html{
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ham{
+        display: block;
+    }
+
+    .search, .bar, .navRight .plus, .profileRight, .col-4, .top{
+        display: none;
+    }
+
+    .mid{
+        display: block;
+    }
+
+    .logo{
+        margin-left: 50%;
+    }
+
+    .reps, .bottom{
+        display: block;
+        margin: 1rem 0;
+        padding: 0;
+    }
+
+    .out, .main{
+        padding: 0 1rem;
+    }
+    
+    .nam{
+        width: 100%;
+        padding-left: 2rem;
+    }
+    
+    .pic{
+        margin: 2rem 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .profile{
+        height: 50%;
+        width: 50%;
+    }
+}
