@@ -237,9 +237,10 @@ p{
 @media screen and (max-width: 768px) {
     .ham{
         display: block;
+        margin-left: 0;
     }
 
-    .search, .bar, .navRight .plus, .profileRight, .col-4, .top{
+    .search, .bar, .plus, .profileRight, .col-4, .top{
         display: none;
     }
 
@@ -247,8 +248,20 @@ p{
         display: block;
     }
 
+    .mainNav{
+        padding: 1rem;
+    }
+
     .logo{
-        margin-left: 50%;
+        margin-left: 40%;
+    }
+
+    .bell{
+        padding: 0;
+    }
+
+    .navRight{
+        margin-right: 1.5rem;
     }
 
     .reps, .bottom{
