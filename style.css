@@ -245,6 +245,13 @@ p{
 
     .mid{
         display: block;
+        
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .mid .nav{
+        width: 50rem;
     }
 
     .mainNav{
