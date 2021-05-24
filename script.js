@@ -17,6 +17,23 @@ form.addEventListener("submit", ele => {
     }
 });
 
+//Fetching users in mobile view
+const form3 = document.getElementById("form3");
+const search2 = document.getElementById("search2");
+form3.addEventListener("submit", ele => {
+    ele.preventDefault();
+
+    document.getElementById("repos").innerHTML = "";
+
+    const users = search2.value;
+
+    if(users)
+    {
+        user(users);
+        search2.value = "";
+    }
+});
+
 //Fetching username from users
 async function user(username){
     const data = await fetch(api + username);
@@ -156,3 +173,22 @@ const repSearch = () => {
         }
     }
 }
+
+//Responsive Menu Toggle
+const burger = () => {
+    const ham = document.querySelector(".ham");
+    const nav = document.querySelector(".respnav");
+
+    ham.addEventListener('click', () => {
+
+        if(nav.style.display)
+        {
+            nav.style.display = "";
+        }
+        else{
+            nav.style.display = "block";
+        }
+    })
+}
+
+burger();

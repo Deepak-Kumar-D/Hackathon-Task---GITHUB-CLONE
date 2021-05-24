@@ -238,8 +238,12 @@ p{
 }
 
 /* Reponsive hamburger button and hr for mobile screen */
-.ham, .hr2{
+.ham, .hr2, .respnav, .hamnav{
     display: none;
+}
+
+.respnav{
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 991px) {
@@ -249,13 +253,77 @@ p{
 }
 
 @media screen and (max-width: 768px) {
+    .mainNav{
+        padding: 1rem;
+    }
+
     .ham{
         display: block;
         margin-left: 0;
     }
 
-    .search, .bar, .plus, .profileRight, .col-4, .top, .hr1, .br1{
+    .logo{
+        margin-left: 40%;
+    }
+
+    .bell{
+        padding: 0;
+    }
+
+    .navRight{
+        margin-right: 1.5rem;
+    }
+
+    .plus, .profileRight, .col-4, .top, .hr1, .br1{
         display: none;
+    }
+
+    .respnav{
+        background-color: rgb(14%, 16%, 18%);
+        width: 100%;
+        padding: 1.5rem 1rem 1.5rem 1rem;
+    }
+
+    .respnav hr{
+        background-color: rgb(84, 85, 85);
+    }
+
+    .search, .bar{
+        margin-left: 0;
+        display: none;
+    }
+
+    #search2{
+        background-color: rgb(14%, 16%, 18%);
+        color: azure;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+    
+    #search2::-webkit-input-placeholder{
+        color: rgb(184, 187, 187);
+    }
+    
+    #search2:focus{
+        background-color: azure;
+        border-radius: 0.5rem;
+        color: rgb(14%, 16%, 18%);
+        outline: none;
+    }
+
+    .bar .nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bar .nav-link{
+        padding: 0;
+    }
+
+    .hamnav{
+        display: block;
     }
 
     .mid{
@@ -270,22 +338,6 @@ p{
 
     .hr2{
         display: block;
-    }
-
-    .mainNav{
-        padding: 1rem;
-    }
-
-    .logo{
-        margin-left: 40%;
-    }
-
-    .bell{
-        padding: 0;
-    }
-
-    .navRight{
-        margin-right: 1.5rem;
     }
 
     .reps, .bottom{
@@ -314,4 +366,11 @@ p{
         height: 50%;
         width: 50%;
     }
+}
+
+@media screen and (max-width: 420px) {
+    html{
+        font-size: 50%;
+    }
+    
 }
