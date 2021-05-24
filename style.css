@@ -114,16 +114,17 @@ img{
     filter: invert(0.6);
 }
 
-.nav2 svg:hover{
-    filter: invert(0);
-}
-
 .nav2 a:focus{
     font-weight: 500;
 }
 
 .active{
     border-bottom: 2px solid rgb(249, 130, 108);
+    font-weight: 600;
+}
+
+.active svg{
+    filter: none;
 }
 
 .profile{
