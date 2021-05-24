@@ -56,7 +56,7 @@ html{
 #search:focus{
     min-width: 50rem;
     transition: 0.25s;
-    background-color: azure;
+    background-color: rgb(78, 87, 97);
     border-radius: 0.5rem;
     color: rgb(14%, 16%, 18%);
     outline: none;
@@ -308,10 +308,10 @@ p{
     }
     
     #search2:focus{
-        background-color: azure;
+        background-color: rgb(78, 87, 97);
         border-radius: 0.5rem;
         color: rgb(14%, 16%, 18%);
-        outline: none;
+        outline:none;
     }
 
     .bar .nav{
