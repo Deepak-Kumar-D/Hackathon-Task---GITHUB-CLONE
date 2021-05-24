@@ -87,7 +87,7 @@ function createRepos(repos){
 
         const create = document.createElement("a");
         create.classList.add("repo");
-        create.href = "#";
+        // create.href = "#";
         create.id = repo.full_name;
         create.setAttribute("onclick", "show(this.id)")
         create.innerHTML = repo.name;
