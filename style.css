@@ -122,11 +122,22 @@ img{
     font-weight: 500;
 }
 
+.active{
+    border-bottom: 2px solid rgb(249, 130, 108);
+}
+
 .profile{
     height: 30rem;
     width: 30rem;
     overflow: hidden;
     border-radius: 50%;
+}
+
+.hr1{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: -1;
 }
 
 /* For responsive navigation bar inside top container as none and contents inside each repository as none until selected */
@@ -205,6 +216,10 @@ p{
     font-weight: 500;
 }
 
+.repo{
+    cursor: pointer;
+}
+
 .contents{
     margin: 1rem;
     padding: 0.5rem;
@@ -222,8 +237,8 @@ p{
     color: brown;
 }
 
-/* Reponsive hamburger button for mobile screen */
-.ham{
+/* Reponsive hamburger button and hr for mobile screen */
+.ham, .hr2{
     display: none;
 }
 
@@ -239,19 +254,22 @@ p{
         margin-left: 0;
     }
 
-    .search, .bar, .plus, .profileRight, .col-4, .top{
+    .search, .bar, .plus, .profileRight, .col-4, .top, .hr1, .br1{
         display: none;
     }
 
     .mid{
         display: block;
-        
         overflow-x: scroll;
         overflow-y: hidden;
     }
 
     .mid .nav{
         width: 50rem;
+    }
+
+    .hr2{
+        display: block;
     }
 
     .mainNav{

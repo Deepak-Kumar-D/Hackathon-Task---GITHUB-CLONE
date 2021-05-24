@@ -83,11 +83,11 @@ function createRepos(repos){
         const div = document.createElement("div");
         div.className = "list";
         const hr = document.createElement("hr");
+        hr.className = "repoHr";
         reps.append(div);
 
         const create = document.createElement("a");
         create.classList.add("repo");
-        // create.href = "#";
         create.id = repo.full_name;
         create.setAttribute("onclick", "show(this.id)")
         create.innerHTML = repo.name;
@@ -131,4 +131,28 @@ function show(ele){
     }
     
     watch.style.display = "block";
+}
+
+//Filter repos in repo search bar
+const repSearch = () => {
+    const searchRepo = document.querySelector("#searchRepo").value.toUpperCase();
+    const repoName = document.querySelectorAll(".repo");
+    const list = document.querySelectorAll(".list");
+    const hr = document.getElementsByClassName("repoHr");
+
+    console.log(hr);
+    
+    for(i=0;i<repoName.length;i++)
+    {
+        if(repoName[i].innerHTML.toUpperCase().indexOf(searchRepo) > -1)
+        {
+            list[i].style.display = "";
+            hr[i].style.display = "";
+        }
+        else
+        {
+            list[i].style.display = "none";
+            hr[i].style.display = "none";
+        }
+    }
 }
